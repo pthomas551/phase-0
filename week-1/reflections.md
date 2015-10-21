@@ -85,3 +85,21 @@ Remove file
 Get help
 
 # 1.4 Forking and Cloning Reflection
+
+If you were going to write instructions for a new person on how to create a new repo, fork a repo, and clone a repo, what would they be? Why would you fork a repository as opposed to create a new one?
+
+To create a repo: log into Github, click the + icon at the top right, and select "Create repository."
+
+To fork a repo: log into Github, navigate to the desired repo on your web browser, and click "Fork" on the top right of the window.
+
+To clone a repo:
+
+- go to the repo on github.com and copy the https clone URL from the right column
+
+- open Terminal.app, navigate to the directory where you want the cloned repo to go, and enter "git clone <pasted clone URL from above>
+
+Why would you fork a repository as opposed to create a new one? Forking an existing repository gives you your own set of all the files from that repository, whereas creating a new repository gives you an empty repo to start a new project.
+
+What struggles did you have setting up git and GitHub? What did you learn in the process?
+
+The only thing I struggled with a bit was understanding the difference between the local copy of the repo and the master version stored on Github. I initially worried that deleting the local repo directory would mess up the master repo on Github, which it did not. As a result I learned that Git does not work like other cloud services like Dropbox where changes on the local machine are immediately reflected on the server.
