@@ -26,7 +26,7 @@ Write a handy cheatsheet of the commands you need to commit your changes?
 
 1. git status
 2. git add (filename)
-3. git commit -m (filename) "message"
+3. git commit -m "message"
 
 What is a pull request and how do you create and merge one?
 
