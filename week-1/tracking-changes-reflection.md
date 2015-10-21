@@ -16,17 +16,24 @@ It refers to the previous commit from the current one.
 
 What are the 3 stages of a git change and how do you move a file from one stage to the other?
 
-1. Create feature branch (git checkout -b feature_branch_name)
+1. Make changes and save file
 
-2. Create or edit files as needed
+2. Add file to commit (git add)
 
-3. Commit changes to feature branch (git commit -m)
+3. Commit changes (git commit)
 
 Write a handy cheatsheet of the commands you need to commit your changes?
+
+(To commit to local repo use 1-3 only)
 
 1. git status
 2. git add (filename)
 3. git commit -m "message"
+4. git checkout master
+5. git pull origin master
+6. git checkout feature-branch-name
+7. git merge master
+8. git push origin feature-branch-name
 
 What is a pull request and how do you create and merge one?
 
