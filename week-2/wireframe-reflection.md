@@ -19,7 +19,7 @@ No, I had a pretty good idea of what I wanted to do with my site.
 
 What questions did you ask during this challenge? What resources did you find to help you answer them?
 
-I've done this before so I didn't have too many questions. The only thing I decided to use a new application for wireframing this time so I needed to go over its documentation a bit to get the hang of it.
+I've done this before so I didn't have too many questions. The only thing is I decided to use a new application for wireframing this time so I needed to go over its documentation a bit to get the hang of it.
 
 Which parts of the challenge did you enjoy and which parts did you find tedious?
 
