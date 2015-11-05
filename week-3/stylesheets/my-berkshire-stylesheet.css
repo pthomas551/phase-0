@@ -1,0 +1,95 @@
+/*
+
+What is important to know when linking an external file (like a stylesheet) to an HTML file?
+
+It's important to remember the structure of the <link> tag and know the relative path to the file so that the file remains linked even when the page is uploaded to an external service.
+
+What tricks did you use to help you with positioning? How hard was it to get the site as you wanted it?
+
+I didn't find positioning too difficult; I used columns for the list content and centered the other parts of the page. I also used padding to get the spacing right. The only problem was getting the text to display consistently across the columns. There may have been another way to split up the text aside from the column property, which seems to be confusing and inconsistently supported.
+
+What CSS did you use to modify the element style (like size, color, etc.)
+
+I used the font-size property extensively along with the color property where needed.
+
+Did you modify the HTML to include classes or ids? If so, which did you choose and why? If you didn't, how would you know which one to add to your HTML?
+
+Yes, I used both classes and ID's. Classes are helpful when you want to reuse them across multiple elements whereas ID's need to be specific to one element.
+
+When you compared your site to the actual code base, which do you think had cleaner code that followed best practices and why?
+
+My site was cleaner and closer to best practices because it utilized HTML5 semantic tags and did its styling through CSS as opposed to directly in the HTML. This makes the code easier to navigate for both other developers and automated programs.
+
+*/
+
+
+* {
+   color: #000080 ;
+   background-color: #ffffff ;
+}
+
+header {
+ font-weight: bold;
+ text-align: center;
+ padding-bottom: 10px;
+}
+.header-1st {
+ font-size: 200%;
+}
+
+.header-info {
+ margin: 0;
+ padding: 0;
+}
+
+#name {
+  font-size: 105%;
+}
+
+#address {
+  font-size: 90%;
+}
+#citystatezip {
+  font-size: 90%;
+}
+
+#content-list {
+   columns: 2;
+}
+
+.border {
+   border-top: thin groove #000000;
+   padding-top: 10px;
+   padding-bottom: 10px;
+}
+
+#comments {
+  font-size: 80%;
+}
+
+a {
+   color: #800080 ;
+}
+a:visited {
+   color: #ff0000 ;
+}
+.description-text {
+   font-size: 70%;
+}
+#geico {
+  text-align: center;
+  font-size: 60%;
+}
+
+li {
+  padding-bottom: 20px;
+}
+
+li p {
+  margin: 0;
+  padding: 0;
+}
+
+#copyright {
+  font-size: 60%;
+}
