@@ -10,8 +10,6 @@ What is the difference between float and integer division? How would you explain
 
 Integer division rounds down to the nearest whole number if there is a remainder, while float division will add on the remainder as a decimal value.
 
-Code challenges
-
 How does Ruby handle addition, subtraction, multiplication, and division of numbers?
 
 Ruby uses standard arithmetical operators to handle these, but if variables are integers only integer values will be returned.
