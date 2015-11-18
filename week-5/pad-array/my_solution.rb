@@ -1,8 +1,8 @@
 # Pad an Array
 
-# I worked on this challenge [by myself, with: ]
+# I worked on this challenge [with Bob Dorff]
 
-# I spent [] hours on this challenge.
+# I spent [1.5] hours on this challenge.
 
 
 # Complete each step below according to the challenge directions and
@@ -78,3 +78,30 @@ end
 
 
 # 4. Reflection
+=begin
+
+Were you successful in breaking the problem down into small steps?
+
+Relatively successful although there was not a 1 for 1 correspondence with the final code.
+
+Once you had written your pseudocode, were you able to easily translate it into code? What difficulties and successes did you have?
+
+We found the pseudocode helpful for laying out the initial steps but some difficulties with syntax and testing required us to make revisions and add additional steps on the fly.
+
+Was your initial solution successful at passing the tests? If so, why do you think that is? If not, what were the errors you encountered and what did you do to resolve them?
+
+No, it was not successful because we were not returning the correct output to the console. It turned out that we were using the wrong iterator, and after some research we eventually found that it was easiest to not use an iterator at all.
+
+When you refactored, did you find any existing methods in Ruby to clean up your code?
+
+We found some other methods that would have worked, but none that seemed to offer benefits beyond the ones we had already chosen to use.
+
+How readable is your solution? Did you and your pair choose descriptive variable names?
+
+I think that our solution is reasonably readable; we took care to use variable names that made sense, and in our refactored solution we added comments to the code to increase readability.
+
+What is the difference between destructive and non-destructive methods in your own words?
+
+A destructive method permanently alters its target, while a non-destructive method does not.
+
+end
