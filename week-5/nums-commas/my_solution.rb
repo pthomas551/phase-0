@@ -28,7 +28,7 @@ Insert commas at (array)
 Reverse string back
 =end
 
-
+=begin
 # 1. Initial Solution
 def separate_comma(int)
 str = int.to_s
@@ -51,11 +51,16 @@ else
   return str.reverse!
 end
 end
-
+=end
 
 
 
 # 2. Refactored Solution
+def separate_comma(int)
+int = int.to_s.chars.each_slice(3).to_a.each {|a| if a.size == 3; a.push ',' end}
+int.last.pop if int.last.include?(',')
+int.join.reverse
+end
 
 
 
