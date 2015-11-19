@@ -92,7 +92,7 @@ elsif people.size % 5 == 0
 people.each_slice(5) { |p| groups[groupnum] = p; groupnum += 1 }
 end
 # print out nicely formatted group assignments
-groups.each { |k,v| puts 'Group ' + k.to_s + ': ' + v.join(", ") }
+groups.each { |k,v| puts 'Group ' + k.to_s + ': ' + v.join(', ') }
 end
 
 acct_groups(dbcpeople,dbcgroups)
