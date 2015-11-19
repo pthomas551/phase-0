@@ -1,3 +1,27 @@
+#reflection
+=begin
+What was the most interesting and most difficult part of this challenge?
+
+It was interesting to get more experience with hash manipulation. I didn't find the challenge that difficult overall, probably the part that took the most work was figuring out the correct syntax to achieve the desired result with the array.
+
+Do you feel you are improving in your ability to write pseudocode and break the problem down?
+
+Yes, my pseudocode more or less worked on the first go this time now that I have a better idea of Ruby's capabilities.
+
+Was your approach for automating this task a good solution? What could have made it even better?
+
+Yes, it was a good solution although I think a more elegant solution would get rid of the group number iterator variable and allow for variance in group sizes between 4 and 5.
+
+What data structure did you decide to store the accountability groups in and why?
+
+I used a hash since each group has a unique numerical identifier.
+
+What did you learn in the process of refactoring your initial solution? Did you learn any new Ruby methods?
+
+I got more practice at making my code more compact and learned how to use the join method to get cleaner output of an array of strings. I also learned how to use the shuffle method to randomize the order of an array.
+
+=end
+
 #Pseudocode
 =begin
 Randomize people array
