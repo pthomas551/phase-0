@@ -1,6 +1,6 @@
 # Calculate the mode Pairing Challenge
 
-# I worked on this challenge [with Phil Thomas]
+# I worked on this challenge [with Caroline Kenworthy]
 
 # I spent [1] hours on this challenge.
 
@@ -53,3 +53,13 @@ end
 
 
 # 4. Reflection
+=begin
+Which data structure did you and your pair decide to implement and why?
+We used a hash since this allowed for the creation of separate arrays for each frequency number.
+Were you more successful breaking this problem down into implementable pseudocode than the last with a pair?
+Yes, although we had to make some adjustments as we went along.
+What issues/successes did you run into when translating your pseudocode to code?
+We had difficulties with selecting the right methods and syntax but these were quickly overcome by reading the documentation and looking at error messages/output.
+What methods did you use to iterate through the content? Did you find any good ones when you were refactoring? Were they difficult to implement?
+We used group_by to iterate through the content which was somewhat difficult to implement since we were not experienced with its use. So we had to review the documentation carefully and try a couple of different approaches.
+=end
