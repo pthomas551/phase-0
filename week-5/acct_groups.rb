@@ -12,14 +12,14 @@ split the array up into separate arrays of 4 and add each to hash
 
 ditto if number is divisible by 5
 
-
-
-return hash
+printout group assignments
 
 =end
 dbcpeople = ['Jack Abernethy','Mohammad Amin','Zollie Barnes','Reuben Brandt','Dana Breen','Breton Burnett','Saundra Vanessa Castaneda','Luis De Castro','Nicolette Chambers','Kerry Choy','Rick Davies','Katherine DiAngelo','Adrian Diaz','David Diaz','Bob Dorff','Michael Du','Paul Dynowski','Jenna Espezua','Sean Fleming','Jennifer Gilbert','Marcel Haesok','Albert Hahn','Arthur Head','Jonathan Huang','Thomas Huang','Alex Jamar','Kevin Jones','Steven Jones','Coleby Kent','Caroline Kenworthy','Calvin Lang','Yi Lu','David Ma','Charlotte Manetta','Sean Massih','Tom McHenry','Alex Mitzman','Lydia Nash','Brenda Nguyen','Matthew Oppenheimer','Mason Pierce','Joe Plonsker','Mira Scarvalone','Joseph Scott','Chris Shahin','Benjamin Shpringer','Lindsey Stevenson','Philip Thomas','Gary Tso','Ting Wang','Monique Williamson','Regina Wong','Hanah Yendler']
 dbcgroups = Hash.new
 
+#initial
+=begin
 def acct_groups(people, groups)
 
 people.shuffle!
@@ -46,4 +46,29 @@ end
 groups.each { |k,v| puts "Group #{k}: #{v}" }
 
 end
+acct_groups(dbcpeople,dbcgroups)
+=end
+#refactored
+
+
+def acct_groups(people, groups)
+# shuffle people array and intialize group numbering
+people.shuffle!
+groupnum = 1
+# split off groups of 3 until we can fit everyone else in equally sized groups of 4 or 5
+until people.size % 4 == 0 || people.size % 5 == 0
+groups[groupnum] = people.pop(3)
+groupnum += 1
+end
+# split people off into equally sized groups of 4 or 5
+if people.size % 4 == 0
+people.each_slice(4) { |p| groups[groupnum] = p; groupnum += 1 }
+
+elsif people.size % 5 == 0
+people.each_slice(5) { |p| groups[groupnum] = p; groupnum += 1 }
+end
+# print out nicely formatted group assignments
+groups.each { |k,v| puts 'Group ' + k.to_s + ': ' + v.join(", ") }
+end
+
 acct_groups(dbcpeople,dbcgroups)
