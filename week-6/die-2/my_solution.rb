@@ -2,15 +2,16 @@
 
 
 # I worked on this challenge [by myself].
-# I spent [#] hours on this challenge.
+# I spent [1] hours on this challenge.
 
 # Pseudocode
 
-# Input:
-# Output:
+# Input: Array with die sides
+# Output: Array value at random die side
 # Steps:
-
-
+# Initialize with die sides array and # of sides
+# Access die array at random value from 0 to sides
+#
 # Initial Solution
 =begin
 class Die
