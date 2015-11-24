@@ -70,8 +70,8 @@ class GuessingGame
       return :correct
     else
       @solved = false
-      return :high if @guess > @answer # If guess > answer, return :high, solved is false
-      return :low if @guess < @answer # If guess < answer, return :low, solved is false
+      # If guess > answer, return :high, If guess < answer, return :low
+      (@guess > @answer ? :high : :low)
     end
   end
 
@@ -87,3 +87,22 @@ end
 
 
 # Reflection
+=begin
+How do instance variables and methods represent the characteristics and behaviors (actions) of a real-world object?
+
+Instance variables and methods represent the initial attributes of an object, define the ways you can interact with it, and save the results of your interaction with it. For example, if I had a book on a shelf, it would default to being on the shelf, I would have a method to take it off the shelf, and it would record that state and stay off the shelf until I decided to put it back on the shelf.
+
+
+When should you use instance variables? What do they do for you?
+
+Instance variables are saved to that instance of the class so they allow you to save the results of your code's interaction with that instance. As such they are helpful when you want to save the state of an object in order to come back to it later.
+
+Explain how to use flow control. Did you have any trouble using it in this challenge? If so, what did you struggle with?
+
+Ruby has many options for flow control, the most common being if/else and case/when statements. I struggled a bit with figuring out the syntax for a case statement, so I decided to go with if/else for the initial solution. Then I successfully implemented a case statement in the refactored solution, which turned out to be more elegant in my opinion.
+
+Why do you think this code requires you to return symbols? What are the benefits of using symbols?
+
+Because symbols are static, and too high and too low would be a static value for any given guess/answer combination, they make sense to use as a return value. Symbols are more computationally efficient than strings so it is a good idea to use them whenever possible.
+
+=end
