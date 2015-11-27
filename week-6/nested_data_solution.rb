@@ -61,3 +61,19 @@ def startup_name_gen!(array)
   end
 end
 puts startup_name_gen!(startup_names)
+
+# reflection
+=begin
+What are some general rules you can apply to nested arrays?
+
+A nested array can be accessed using the index values in succession like so: [0][1].
+
+What are some ways you can iterate over nested arrays?
+
+A nested array can be iterated over using nested iterators or recursion.
+
+Did you find any good new methods to implement or did you re-use one you were already familiar with? What was it and why did you decide that was a good option?
+
+Yes, I used recursion for the bonus challenge because it reduced the need for extra code. I also used the #map! method, which I have not used to date, because it allowed for modifying an array in place.
+
+=end
