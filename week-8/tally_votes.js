@@ -1,7 +1,7 @@
 // Tally Votes in JavaScript Pairing Challenge.
 
-// I worked on this challenge with:
-// This challenge took me [#] hours.
+// I worked on this challenge with: Bob Dorff
+// This challenge took me [2.5] hours.
 
 // These are the votes cast by each student. Do not alter these objects here.
 var votes = {
@@ -52,7 +52,7 @@ voteCount would be ...
     treasurer: { Kerry: 1 }
   }
 
-*/
+  */
 // voteCount.president["Bob"] === 3
 
 // add vote function
@@ -60,7 +60,6 @@ voteCount would be ...
 // if name is already in voteCount for office
 // increment vote count in VoteCount
 // else create new name: votes pair for office in VoteCount
-
 // get votes by iterating through votes accessing votes at voterNames
 // iterate
 var officers = {
@@ -72,6 +71,22 @@ var officers = {
 
 
 
+
+/* Once the votes have been tallied, assign each officer position the name of the
+student who received the most votes. */
+
+// Pseudocode
+// add vote function
+// iterate through votes object
+// if name is already in voteCount for office
+// increment vote count in VoteCount
+// else create new name: votes pair for office in VoteCount
+// get votes by iterating through votes accessing votes at voterNames
+//
+// __________________________________________
+// Initial Solution
+
+/*
 
 function addVote(office, name) {
   if (voteCount[office].hasOwnProperty(name)) {
@@ -99,13 +114,10 @@ function getVoterBallots() {
 
 function tallyVotes(array) {
   for (var i = 0; i < voterBallots.length; i++ ) {
-
     var ballot = voterBallots[i];
-
     Object.keys(ballot).forEach(function(office) {
       addVote(office, ballot[office]);
     });
-
   }
 }
 
@@ -118,8 +130,6 @@ function invert(object) {
   }
   return new_obj;
 }
-
-
 
 function voteSort() {
   var offices = Object.keys(voteCount);
@@ -138,36 +148,91 @@ getVoterBallots();
 tallyVotes(voterBallots);
 voteSort();
 
-
-
-/* Once the votes have been tallied, assign each officer position the name of the
-student who received the most votes. */
-
-// Pseudocode
-
-
-// __________________________________________
-// Initial Solution
-
-
-
-
-
+*/
 
 
 // __________________________________________
 // Refactored Solution
 
-
-
-
+// add vote to vote count object (creates new candidate property if does not already exist)
+function addVoteToVoteCount(office, name) {
+  if (voteCount[office].hasOwnProperty(name)) {
+    voteCount[office][name]++;
+  } else {
+    voteCount[office][name] = 1;
+  }
+}
+// create array with voter names
+function getVoterNames() {
+  voterNames = Object.keys(votes);
+}
+// get ballots from votes object for each voter in voterNames, stores in voterBallots
+function getVoterBallots() {
+  for (var i = 0 ; i < voterNames.length; i++ ) {
+    voter = voterNames[i];
+    voterBallots.push(votes[voter]);
+  }
+}
+// iterates through voterBallots and calls addVoteToVoteCount for each property/value pair
+function tallyVotes(array) {
+  for (var i = 0; i < voterBallots.length; i++ ) {
+    ballot = voterBallots[i];
+    Object.keys(ballot).forEach(function(office) {
+      addVoteToVoteCount(office, ballot[office]);
+    });
+  }
+}
+// function to invert an object for use in getWinner function
+function invertObject(object) {
+  var new_obj = {};
+  for (var prop in object) {
+    if(object.hasOwnProperty(prop)) {
+      new_obj[object[prop]] = prop;
+    }
+  }
+  return new_obj;
+}
+// returns winner for provided office
+function getWinner(office) {
+  ballots = voteCount[office];
+  voteTotalsObject = invertObject(ballots);
+  voteTotals = Object.keys(voteTotalsObject);
+  winningTotal = voteTotals.sort(function(a, b){return b-a})[0];
+  return voteTotalsObject[winningTotal];
+}
+// stores winner of provided office in officers object
+function storeWinner(office) {
+  officers[office] = getWinner(office);
+}
+// initialize arrays
+var voterNames = [];
+var voterBallots = [];
+// call functions to retrieve ballots from votes object and tally
+getVoterNames();
+getVoterBallots();
+tallyVotes(voterBallots);
+// stores results for each office in officers object
+for (var office in officers) {
+  storeWinner(office);
+}
 
 
 // __________________________________________
 // Reflection
+/*
+What did you learn about iterating over nested objects in JavaScript?
 
+When iterating over nested objects in JS it is helpful to use functions to break down the task into as many discrete steps as possible.
 
+Were you able to find useful methods to help you with this?
 
+Yes, forEach and Object.keys were particularly helpful.
+
+What concepts were solidified in the process of working through this challenge?
+
+It was helpful to get more exposure to the handling of data structures in JS and options for JS iteration.
+
+*/
 
 
 
@@ -188,47 +253,47 @@ assert(
   (voteCount.president["Bob"] === 3),
   "Bob should receive three votes for President.",
   "1. "
-)
+  )
 
 assert(
   (voteCount.vicePresident["Bob"] === 2),
   "Bob should receive two votes for Vice President.",
   "2. "
-)
+  )
 
 assert(
   (voteCount.secretary["Bob"] === 2),
   "Bob should receive two votes for Secretary.",
   "3. "
-)
+  )
 
 assert(
   (voteCount.treasurer["Bob"] === 4),
   "Bob should receive four votes for Treasurer.",
   "4. "
-)
+  )
 
 assert(
   (officers.president === "Louise"),
   "Louise should be elected President.",
   "5. "
-)
+  )
 
 assert(
   (officers.vicePresident === "Hermann"),
   "Hermann should be elected Vice President.",
   "6. "
-)
+  )
 
 assert(
   (officers.secretary === "Fred"),
   "Fred should be elected Secretary.",
   "7. "
-)
+  )
 
 assert(
   (officers.treasurer === "Ivy"),
   "Ivy should be elected Treasurer.",
   "8. "
-)
+  )
 
