@@ -45,3 +45,11 @@ end
 test_array = [123,354,123,65,34,15,3,4562,6,34,7,20]
 test_output = super_fizzbuzz(test_array)
 puts test_output
+
+# reflection
+# What concepts did you review or learn in this challenge?
+# I got some more practice doing fizzbuzz and using array methods.
+# What is still confusing to you about Ruby?
+# It's not very confusing for the moment but there are always new methods to learn! I could still stand to learn more about the Enumerable object, though.
+# What are you going to study to get more prepared for Phase 1?
+# I'll do the other review challenges, go over our text books, and possibly do some Ruby/JS challenges on HackerRank.
