@@ -74,3 +74,17 @@ removeItem('dhgfd')
 printList();
 updateQuantity('apples', 4);
 printList();
+
+// reflection
+/*
+What concepts did you solidify in working on this challenge? (reviewing the passing of information, objects, constructors, etc.)
+
+I got some more reviews on conditionals and manipulating objects in JS.
+
+What was the most difficult part of this challenge?
+
+I don't think any of it was especially hard but I did get tripped up on dot versus bracket notation in the first run of the code.
+
+Did an array or object make more sense to use and why?
+
+An object made more sense since the data is organized in unique key-value combinations.
